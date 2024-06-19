@@ -1,0 +1,13 @@
+// Makro kullanımı...
+
+# define SUMARRAY(a, n) for(i = 0; i < (n); i++) sum += a[i];
+
+
+int main(void){
+    int i;
+    int sum = 0;
+    int b[10] = {1,2,3,4,5,6,7,8,9,10};
+    SUMARRAY(b, 10);
+    printf("The sum is %d", sum);
+    return 0;
+}

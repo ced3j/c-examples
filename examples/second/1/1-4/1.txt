@@ -1,0 +1,26 @@
+// aşağıdaki kodda ne gibi bir hata var?
+
+// void *voidPtr;
+// int num = 10, *numPtr;
+// numPtr = &num;
+// voidPtr = numPtr;
+// printf("%d", *voidPtr);
+
+
+/*
+
+void * (Void Pointer) Nedir?
+
+void * türündeki bir pointer, herhangi bir veri türünü işaret edebilen bir pointer'dır. 
+    Yani, void * türündeki bir pointer, int, float, char veya herhangi bir veri türünü işaret edebilir.
+void * kullanımı, genellikle genel amaçlı veri işleme işlemlerinde, özellikle de türden bağımsız veri işleme işlevlerinde kullanılır.
+void * ile işaret edilen verinin türü belirli olmadığından, 
+    bu tür pointer'lar doğrudan dereference (işaret edilen değeri okuma) yapılamaz. 
+    Bu pointer'ların belirli bir türe dönüştürülmesi gerekir.
+
+
+
+Düzeltilmiş hali:
+    printf("%d\n", *(int *)voidPtr);
+
+ */

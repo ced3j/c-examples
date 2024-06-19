@@ -1,0 +1,58 @@
+struct package{
+    int q;
+};
+
+void set_value(struct package data, int value){
+    data.q = value;
+}
+
+
+int main(void){
+    struct package p;
+    p.q = 10;
+    set_value(p, 20);
+    printf("Value = %d\n", p.q);
+    return 0;
+}
+
+
+// Program çıktısı: 10
+// Neden? 
+
+
+set_value(p, 20) çağrısı yapılır. 
+Bu çağrı sırasında p değişkeninin bir kopyası set_value fonksiyonuna aktarılır.
+
+set_value fonksiyonunda data.q = value; ifadesi ile data.q değeri 20 olarak değiştirilir. 
+Ancak bu değişiklik sadece data kopyası üzerinde yapılır, p değişkeni etkilenmez.
+
+
+
+
+// Değişikliği ana değişken üzerinde yapmak isteseydik: 
+
+/*
+Eğer p değişkeninin q üyesinin değerini gerçekten değiştirmek istiyorsanız, 
+set_value fonksiyonuna struct package tipinde bir işaretçi (pointer) geçirmeniz gerekir:
+*/
+
+
+
+#include <stdio.h>
+
+struct package{
+    int q;
+};
+
+void set_value(struct package *data, int value){
+    data->q = value;
+}
+
+int main(void){
+    struct package p;
+    p.q = 10;
+    set_value(&p, 20);  // `p` adresini geçiriyoruz
+    printf("Value = %d\n", p.q);  // Sonuç: 20
+    return 0;
+}
+

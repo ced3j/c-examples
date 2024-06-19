@@ -1,0 +1,28 @@
+char name[20] = "Hello World";
+const char * const greeting;
+greeting = name;
+*(greeting + 5) = 'o';
+printf("%s", name);
+printf("%c", *(greeting + 5));
+
+
+const char * const greeting; tanımlaması:
+
+const char * const greeting; ifadesi, greeting pointer'ını hem kendisini hem de işaret ettiği içeriği sabit (const) olarak tanımlar. Bu, greeting'in işaret ettiği verinin ve greeting'in kendisinin değiştirilemez olduğu anlamına gelir.
+Bu nedenle, greeting'e bir değer atanmadan önce bile, bu tanımlama geçerli değildir çünkü const pointer hemen başlatılmalıdır.
+greeting = name; ataması:
+
+Yukarıdaki hata nedeniyle, const char * const türündeki greeting'e bir değer atanamaz. Çünkü const pointer bir kez başlatıldıktan sonra başka bir değere atanamaz.
+*(greeting + 5) = 'o'; ifadesi:
+
+const char * const ile işaret edilen bellek konumundaki değeri değiştirmek C standardına aykırıdır ve tanımsız davranışa yol açar. Sabit (const) olarak tanımlandığından, işaret edilen veri değiştirilemez.
+
+
+
+
+Düzeltmeler: 
+
+const char * const greeting = name;
+
+*(greeting + 5) = 'o'; ataması yapılamaz (sadece okunabilir veri, (neden sadece okunabilir?))
+
