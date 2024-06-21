@@ -1,0 +1,58 @@
+Soru1) Verilen-dizi indis notasyonu ile yazılmış fonksiyonun eş değer fonksiyonunu işaretçi notasyonu ile yazınız
+
+int stringCompare(const char *s1, const char *s2){
+    int sub;
+    for(sub = 0; s1[sub] == s2[sub]; sub++){
+        sub--;
+    }
+
+    if(s1[sub] == '\0' && s2[sub] == '\0'){
+        return 0;
+    }else if(s1[sub] < s2[sub]){
+        return -1;
+    }else{
+        return 1;
+    }
+}
+
+
+
+
+----------------------
+
+
+
+Soru2) Asagida verilen main() fonksiyonu bir karakter dizisini baslatir, ekranda gérintiiler ve ardindan karakter dizisini bir argiiman olarak 6zyinelemeli fonksiyona
+iletir. Bir karakter dizisini argiiman olarak alan, karakter dizisini ters sirada yazdiran ve higbir sey déndiirmeyen é6zyinelemeli bir stringReverse() fonksiyonu
+yazin. Fonksiyon, karakter dizisinin sonlandirici bos karakteriyle (null) kargilagildiginda igkemeyi durdurmali ve geri dénmelidir. (Not: i) Ornek ekran giktisi agagida
+verilmistir))
+
+
+
+#include stdio.h
+#define SIZE 30
+
+void stringReverse(char strArray[]);
+
+int main(){
+
+    int loop;
+    char strArray[SIZE] = "Print this string backward.";
+    
+    for(loop = 0; loop < SIZE; loop++){
+        printf("%c", strArray[loop]);
+    }
+
+    printf("\n");
+    stringReverse(strArray);
+    printf("\n");
+
+    return 0;
+}
+
+
+/*function to reverse a string*/
+
+void stringReverse(char strArray[]){
+    /* code here */
+}
