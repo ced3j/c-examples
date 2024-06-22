@@ -1,6 +1,6 @@
 // a) Insertion sort algoritmasında bulunan iki mantıksal hatayı düzelt: 
 
-// Vizeler-  2016-2017 - 4. soru
+// KTÜ - Vizeler-  2016-2017 - 4. soru
 
 
 #include <stdio.h>
