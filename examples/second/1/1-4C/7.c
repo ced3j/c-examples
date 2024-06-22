@@ -14,6 +14,7 @@ int main(){
     
     ptr = &num2; // Bu geçerli çünkü işaretçi const değil
 
+
     return 0;
 }
 

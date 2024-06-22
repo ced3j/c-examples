@@ -30,7 +30,12 @@ programın geri kalanında bu adresi değiştiremezsiniz.
 
 
 
-
+// Özet formül:    const int * const ptr
+//                 1. const       2. const (varsa)
+//                int'e ait      ptr'a ait
+// 
+//                  int önünde const varken --> veri sabit (farklı bir değer atanamaz)
+//                  ptr önünde const varken --> işaretçi sabit (farklı bir adres verilemez)
 
 
 // Örnek 1: Değiştirilemeyen İşaretçi ve Değiştirilemeyen Veri

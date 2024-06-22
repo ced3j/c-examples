@@ -1,4 +1,4 @@
-// Void Pointer ( BOş işaretçi )
+// Void Pointer ( Boş işaretçi )
 
 /* 
 Boş işaretçiler herhangi bir veri türünü işaret edebilir ama 
