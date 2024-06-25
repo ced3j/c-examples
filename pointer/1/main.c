@@ -1,32 +1,35 @@
+/*
+
+Bir string'in uzunluğunu hesaplayan bir C programı yazın. strlen fonksiyonunu kullanmadan, pointerlar kullanarak bu işlemi gerçekleştirin.
+
+
+ */
+
+
 #include <stdio.h>
-#include "student.h"
+
+
+int calculate_length(char *str);
 
 int main(){
-    struct Student students[MAX_STUDENTS];
-    int numStudents = 0;
-    char choice;
 
-    do{
-        printf("\n --- Ogrenci Not Sistemi ---\n");
-        printf("1- Yeni Ogrenci Ekle \n");
-        printf("2- Ogrenci Bilgilerini Goruntule\n");
-        printf("3- Cikis\n");
-        printf("Seciminiz: ");
-        scanf("%c", &choice);
+    char str[] = "Hello";
+    
+    int length = calculate_length(str);
 
-        switch(choice){
-            case '1':
-                addStudent(students, &numStudents);
-                break;
-            case '2':
-                printStudents(students, numStudents);
-                break;
-            case '3':
-                printf("Programdan cikiliyor...\n");
-                break;
-            default:
-                printf("Gecersiz secim! Tekrar deneyin..\n");
-        }
-    } while(choice != '3');
+    printf("Len: %d", length);
+
     return 0;
+}
+
+
+
+int calculate_length(char* str){
+    int len = 0;
+
+    while(*str != '\0'){
+        len++;
+        str++;
+    }
+    return len;
 }
