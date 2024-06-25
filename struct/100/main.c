@@ -36,12 +36,21 @@ int main(){
 }
 
 
+/*
+
+Bu fonksiyon, Student yapısını sadece okumak için kullanıyor. Öğrencinin bilgilerini ekrana yazdırıyor, 
+fakat bu bilgiler üzerinde herhangi bir değişiklik yapmıyor. Bu nedenle, Student yapısının bir işaretçisi 
+const olarak tanımlanmıştır. Bu, fonksiyonun içinde s işaretçisi ile gösterilen Student yapısının
+içeriğinin değiştirilmesini engeller.
+
+*/
 void printStudent(const Student *s){
     printf("Name: %s\n", s->name);
     printf("Age: %d\n", s->age);
     printf("Department: %s\n", s->name);
     printf("Grades: %.2f, %.2f, %.2f, %.2f, %.2f\n\n", s->grades[0], s->grades[1], s->grades[2], s->grades[3], s->grades[4]);
 }
+
 
 
 void updateStudent(Student *s, const char *name, int age, const char *department, const float grades[]){

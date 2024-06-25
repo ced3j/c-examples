@@ -18,6 +18,8 @@ int main(){
 
 
     *(qtr++) = *(ptr++);
+    // önce qtr'nin gösterdiği yere ptr'nin değerini atar ve ikisinin de gösterdiği adresi 1 arttırır
+    
 
     for(int i = 0; i < 8; i++){
         printf("%d ", dizi[i]);
@@ -46,7 +48,6 @@ int main(){
     for(int i = 0; i < 8; i++){
         printf("%d ", dizi[i]);
     }
-
 
     return 0;
 }

@@ -1,14 +1,11 @@
-
-
-
 #include <stdio.h>
-
 
 /*
 Aynı türden iki yapı nesnesi birbirlerine atanabilir. 
 Bu durumda yapının karşılıklı elemanları birbirlerine
 atanmaktadır
  */
+
 struct SAMPLE{
     int a;
     long b;
