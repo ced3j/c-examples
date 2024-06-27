@@ -22,5 +22,8 @@ int main(){
     
     printf("AFTER: arr[0] = %d, arr[1] = %d, arr[2] = %d, result = %d\n", arr[0], arr[1], arr[2], result);
 
+    printf("\n\n AFTER p = %d, q = %d\n\n", *p, *q);
+
+
     return 0;
 }
