@@ -1,0 +1,79 @@
+
+*************>> ÖZET <<**************
+
+
+    const char *ptr = Gösterilen değer sabit, ptr adresi değişken
+
+
+    char * const ptr = Ptr adresi sabit, değer değişken
+
+
+    const char * const ptr = İkisi de sabit
+
+
+
+*************************************
+
+
+const char *ptr 
+
+Bu gösterici, gösterdiği değerin(char) sabit olduğunu belirtir
+    ancak göstericinin kendisi değişebilir
+
+
+    const char *ptr;
+    char ch = 'A';
+    ptr = &ch; // Geçerli
+    *ptr = 'B'; // Geçersiz, çünkü *ptr sabit
+
+
+    ptr'nin adresi değişebildi fakat gösterdiği değer değişemedi
+
+
+------------------------------------------------------
+
+
+char * const ptr   
+
+
+Bu gösterici göstericinin kendisinin sabit olduğunu belirtir ancak 
+    gösterdiği değer değişebilir
+
+
+
+    char ch1 = 'A';
+    char ch2 = 'B';
+    char *const ptr = &ch1;
+    ptr = &ch2; // Geçersiz, çünkü ptr sabit
+    *ptr = 'C'; // Geçerli, çünkü *ptr değiştirilebilir
+
+
+
+
+    Yani const ibaresi ptr'nin hemen yanına geldiğinde 
+    ptr'nin adresi sabit olmak zorunda ama ptr'nin gösterdiği değer değişebilir
+    yani const ptr yaptığımızda adresi sabitliyoruz başka bir şey değişebildi
+
+
+
+
+------------------------------------------------------
+
+
+
+const char * const ptr;
+
+
+Bu gösterici, hem göstericinin kendisinin hem de gösterdiği 
+    değerin sabit olduğunu belirtir.
+
+
+
+    const char ch = 'A';
+    const char * const ptr = &ch;
+    ptr = &ch; // Geçersiz çünkü ptr sabit
+    *ptr = 'B'; // Geçersiz çünkü *ptr sabit 
+
+
+
+
