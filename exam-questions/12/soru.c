@@ -34,3 +34,12 @@ int main (){
     }
     return 0;
 }
+
+// Matris toplama fonksiyonu
+void myAddition(int param1[][2], int param2[][2], const int rows, const int columns) {
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < columns; j++) {
+            param1[i][j] += param2[i][j];  // Matris toplama işlemi
+        }
+    }
+}
