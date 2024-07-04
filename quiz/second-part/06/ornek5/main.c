@@ -4,7 +4,7 @@ int main() {
     int dizi[5] = {10, 20, 30, 40, 50};
     int *ptr = dizi; // ptr = &dizi[0]
 
-    printf("Başlangıçta ptr: %d\n", *ptr); // 10
+    printf("Baslangicta ptr: %d\n", *ptr); // 10
 
     // Ön Ek Artırma (Prefix Increment)
     // önce pointer'ın yerini 1 ileriye taşı daha sonra da oradaki değeri kullan
